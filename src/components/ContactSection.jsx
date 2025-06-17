@@ -1,4 +1,12 @@
-import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  LinkedinIcon,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -41,7 +49,8 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:joshuapark1309@gmail.com"
+                    target="_blank"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     joshuapark1309@gmail.com
@@ -50,15 +59,16 @@ export const ContactSection = () => {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="p3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <LinkedinIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Phone</h4>
+                  <h4 className="font-medium">Linkedin</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="https://www.linkedin.com/in/joshuapark1309/"
+                    target="_blank"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    linkedin.com/in/joshuapark1309
                   </a>
                 </div>
               </div>
@@ -69,7 +79,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Atlanta GA, United States
+                    Georgia, United States
                   </a>
                 </div>
               </div>
@@ -77,10 +87,13 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/joshuapark1309/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://github.com/joshuapark2" target="_blank">
                   <Github />
                 </a>
               </div>
@@ -122,7 +135,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden "
-                  placeholder="johndoe@gmail.com"
+                  placeholder="John_Doe_123@gmail.com"
                 ></input>
               </div>
 
