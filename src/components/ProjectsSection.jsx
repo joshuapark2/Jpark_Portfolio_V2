@@ -65,7 +65,10 @@ export const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/20 text-secondary-foreground">
+                    <span
+                      key={`${project.id}-${tag}`} // Fix: “Each child in a list should have a unique 'key' prop.”
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/20 text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
