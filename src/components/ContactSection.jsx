@@ -40,10 +40,12 @@ export const ContactSection = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6 md:pl-12">
+              Contact Information
+            </h3>
             <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p3 rounded-full bg-primary/10">
+              <div className="grid grid-cols-[auto_1fr] items-center md:gap-4">
+                <div className="self-start rounded-full bg-primary/10 p-2">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -57,8 +59,8 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p3 rounded-full bg-primary/10">
+              <div className="grid grid-cols-[auto_1fr] items-center md:gap-4">
+                <div className="self-start rounded-full bg-primary/10 p-2">
                   <LinkedinIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -72,8 +74,8 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p3 rounded-full bg-primary/10">
+              <div className="grid grid-cols-[auto_1fr] items-center md:gap-4">
+                <div className="self-start rounded-full bg-primary/10 p-2">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -84,7 +86,7 @@ export const ContactSection = () => {
                 </div>
               </div>
             </div>
-            <div className="pt-8">
+            <div className="pt-8 md:pl-12">
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a

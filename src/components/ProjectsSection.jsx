@@ -8,8 +8,9 @@ const projects = [
       "A full-stack CPQ demo app that streamlines complex business workflows using React, TypeScript, and Kotlin with Spring Boot—modeled on Pegasystems' Case Lifecycle.",
     image: "/projects/Pegasystems.webp",
     tags: ["React", "TailwindCSS", "Java", "Kotlin"],
-    demoURL: "#",
-    githubUrl: "#",
+    demoURL:
+      "https://lively-buffer-cd7.notion.site/CPQ-Product-Demo-Joshua-Park-1e4dafd175e280b7aca3c88b3cf2cefc?source=copy_link",
+    githubUrl: "https://github.com/joshuapark2/FullStack_CRUD_LifeCycle",
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const projects = [
       "Georgia Tech Journaling Club of creating and curating pieces that reflect the beauty of life.",
     image: "/projects/Agora.webp",
     tags: ["React", "TailwindCSS", "Next.js", "Firebase"],
-    demoURL: "#",
+    demoURL: "https://gtagora.com/",
     githubUrl: "#",
   },
   {
@@ -30,7 +31,7 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "Next.js"],
     demoURL:
       "https://649fca7ef8f8e602afff46c3--unrivaled-yeot-503c2b.netlify.app/",
-    githubUrl: "#",
+    githubUrl: "https://github.com/joshuapark2/ICF-Demo",
   },
 ];
 
@@ -75,22 +76,31 @@ export const ProjectsSection = () => {
                   {project.description}
                 </p>
                 <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
-                  </div>
+                  {(project.demoURL ||
+                    (project.githubUrl && project.githubUrl !== "#")) && (
+                    <div className="flex space-x-3">
+                      {project.demoURL && project.demoURL !== "#" && (
+                        <a
+                          href={project.demoURL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        >
+                          <ExternalLink size={20} />
+                        </a>
+                      )}
+                      {project.githubUrl && project.githubUrl !== "#" && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        >
+                          <Github size={20} />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
